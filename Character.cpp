@@ -10,8 +10,31 @@ bool Character::Battle(Character Monster, short level)
     srand(time(NULL));
     bool win = false;
 
+    int aori = 1;
+    cout << "press 1 to attack: ";
+    cin >> aori;
+
+
     while (this->HP > 0 || Monster.HP > 0)
     {
+///////////////////////////////////////////////////////
+        while (true){
+            if( aori == 1){
+                aori = 0;
+                break;
+            }
+
+            else if ( aori == 2){
+
+                cout << inventory[1][0]<< inventory[1][1];
+            }
+            aori = 0;
+            cout << "press 1 to attack";
+            cin >> aori;
+
+
+        }
+///////////////////////////////////////////////////////
 
         short damage = rand() % this->DAMAGE + 1;
         Monster.HP -= damage + Monster.ARMOR;
@@ -83,7 +106,6 @@ Character::Character(short playerLVL)
     this->ARMOR = playerLVL;
 }
 
-User::User()
-{
+User::User() {
     this->EXP = 0;
 }
