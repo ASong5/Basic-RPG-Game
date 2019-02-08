@@ -10,15 +10,17 @@ class Character
     short DAMAGE;
 
     public:
-        bool Battle(Character, short);
+        bool Battle(Character);
         Character();
         Character(short);
+        string inventory[4][4]= {"health potion", "damage boost potion", " shield potion", "instakill potion",0,0,0,0};
 
 };
 
 class User : public Character
 {
     short EXP;
+    short KILLS;
 
     public:
         User();
