@@ -2,10 +2,6 @@
 using namespace std;
 
 
-class Character {
-protected:
-    int Healthbonus;
-
 class Character
 {
   protected:
@@ -27,35 +23,10 @@ public:
 };
 
 
-class User : public Character {
-    short KILLS;
-    string INVENTORY[4][4] = {{"health potion", "damage boost potion", "shield potion", "instakill potion"},
-
-                              {"0",             "0",                   "0",             "0"}};
-    int healthbonus_ = 20;
-    int damagebonus_  = 20;
-
-public:
-    int GOLD;
-    int GOLDCOLLECT;
-    User();
-    bool Battle(Character, short);
-    void displayInventory();
-
-    bool editInventory(string);
-
-    void prepareNextRound();
-
-    short retrievePlayerLevel();
-    void afterBattle();
-    void shop();
-
-
-
 class User : public Character
 {
     short KILLS;
-    string INVENTORY[4][4] = {{"health potion", "damage boost potion", "shield potion", "instakill potion"}, {"0", "0", "0", "0"}};
+    string INVENTORY[4][4] = {{"Health Potion", "Damage Boost Potion", "Shield Potion", "Instakill Potion"}, {"0", "0", "0", "0"}};
 
   public:
     User();
